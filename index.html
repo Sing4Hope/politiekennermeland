@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Politie Kennemerland</title>
+    <style>
+        /* Basis styling */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #1a1a1a;
+        }
+
+        header {
+            background-color: #003399; /* Politie blauw */
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffdd00; /* Geel accent politie */
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section.hero {
+            background-color: #e6f0ff;
+            border: 2px solid #003399;
+            border-radius: 8px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        section.hero h2 {
+            color: #003399;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        section.hero p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        section.services {
+            margin-top: 50px;
+            display: flex;
+            gap: 30px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+            background: white;
+            border: 2px solid #003399;
+            border-radius: 10px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 0 15px #003399;
+        }
+
+        .service-card h3 {
+            color: #003399;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            background-color: #001a66;
+            color: #ffdd00;
+            text-align: center;
+            padding: 15px 20px;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Politie Kennemerland</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Diensten</a>
+            <a href="#">Nieuws</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welkom bij Politie Kennemerland</h2>
+            <p>Wij zorgen voor de veiligheid en bescherming van alle inwoners in Kennemerland. Samen werken we aan een veilige omgeving.</p>
+        </section>
+
+        <section class="services">
+            <div class="service-card">
+                <h3>Opsporing</h3>
+                <p>Onze opsporingsteam werkt dag en nacht om criminaliteit te bestrijden en verdachte zaken op te lossen.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Verkeer</h3>
+                <p>We zorgen voor veilige wegen en controleren op snelheid en verkeersveiligheid in de regio.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Hulpverlening</h3>
+                <p>Onze agenten zijn getraind om bij noodsituaties direct hulp te bieden aan burgers in Kennemerland.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Politie Kennemerland | Contact: info@politiekennemerland.nl
+    </footer>
+</body>
+</html>
