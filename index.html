@@ -1,136 +1,222 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Surveillance Dienst Kennemerland</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f8ff;
-            color: #0b1a66;
-        }
-        header {
-            background-color: #003399;
-            color: white;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffdd00;
-        }
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        section {
-            margin-bottom: 60px;
-        }
-        section h2 {
-            color: #003399;
-            border-bottom: 3px solid #ffdd00;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        }
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-        }
-        .diensten-list {
-            list-style: none;
-            padding: 0;
-        }
-        .diensten-list li {
-            background: white;
-            margin-bottom: 12px;
-            padding: 15px 20px;
-            border-left: 6px solid #003399;
-            box-shadow: 0 0 5px rgba(0,51,153,0.2);
-        }
-        footer {
-            background-color: #001a66;
-            color: #ffdd00;
-            text-align: center;
-            padding: 15px 20px;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Surveillance Dienst Kennemerland</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f8ff;
+        color: #0b1a66;
+    }
+    header {
+        background-color: #003399;
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: #ffdd00;
+    }
+    main {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    section {
+        margin-bottom: 60px;
+    }
+    section h2 {
+        color: #003399;
+        border-bottom: 3px solid #ffdd00;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+    }
+    section p {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .diensten-list {
+        list-style: none;
+        padding: 0;
+    }
+    .diensten-list li {
+        background: white;
+        margin-bottom: 12px;
+        padding: 15px 20px;
+        border-left: 6px solid #003399;
+        box-shadow: 0 0 5px rgba(0,51,153,0.2);
+    }
+    footer {
+        background-color: #001a66;
+        color: #ffdd00;
+        text-align: center;
+        padding: 15px 20px;
+        margin-top: 40px;
+        font-size: 0.9rem;
+    }
+
+    /* Tabs styling */
+    .tabs {
+        display: flex;
+        border-bottom: 3px solid #003399;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+    .tab {
+        padding: 10px 25px;
+        border: 2px solid transparent;
+        border-bottom: none;
+        font-weight: 600;
+        color: #003399;
+        background: #e6f0ff;
+        margin-right: 8px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        transition: background-color 0.3s, border-color 0.3s;
+        user-select: none;
+    }
+    .tab.active {
+        background: white;
+        border-color: #003399;
+        border-bottom: 3px solid white;
+        color: #001a66;
+    }
+    .tab-content {
+        border: 2px solid #003399;
+        border-radius: 0 6px 6px 6px;
+        padding: 20px;
+        background: white;
+        min-height: 120px;
+        box-shadow: 0 0 10px rgba(0,51,153,0.2);
+    }
+    .tab-content ul {
+        list-style: disc inside;
+        margin: 0;
+        padding-left: 20px;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>Surveillance Dienst Kennemerland</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#diensten">Diensten</a>
-            <a href="#meldingen">Meldingen</a>
-            <a href="#team">Team</a>
-            <a href="#sollicitatie">Sollicitatie</a>
-            <a href="#regels">Regels</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+    <h1>Surveillance Dienst Kennemerland</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#meldingen">Meldingen</a>
+        <a href="#team">Team</a>
+        <a href="#sollicitatie">Sollicitatie</a>
+        <a href="#regels">Regels</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-    <main>
-        <section id="home">
-            <h2>Welkom bij de Surveillance Dienst Kennemerland</h2>
-            <p>Onze taak is om de veiligheid in Kennemerland te waarborgen door toezicht te houden op verdachte activiteiten en samen te werken met politie en hulpdiensten.</p>
-        </section>
+<main>
+    <section id="home">
+        <h2>Welkom bij de Surveillance Dienst Kennemerland</h2>
+        <p>Onze taak is om de veiligheid in Kennemerland te waarborgen door toezicht te houden op verdachte activiteiten en samen te werken met politie en hulpdiensten.</p>
+    </section>
 
-        <section id="diensten">
-            <h2>Diensten</h2>
-            <ul class="diensten-list">
-                <li>Patrouilleren in wijken en openbare plaatsen</li>
-                <li>Meldingen maken van verdachte situaties</li>
-                <li>Samenwerken met politie, brandweer en ambulance</li>
-                <li>Ondersteuning bieden bij incidenten</li>
+    <section id="diensten">
+        <h2>Diensten</h2>
+        <ul class="diensten-list">
+            <li>Patrouilleren in wijken en openbare plaatsen</li>
+            <li>Meldingen maken van verdachte situaties</li>
+            <li>Samenwerken met politie, brandweer en ambulance</li>
+            <li>Ondersteuning bieden bij incidenten</li>
+        </ul>
+    </section>
+
+    <section id="meldingen">
+        <h2>Actuele Meldingen</h2>
+        <p>Momenteel zijn er geen actieve meldingen. Houd deze pagina in de gaten voor updates!</p>
+    </section>
+
+    <section id="gezocht-wistjedat">
+        <h2>Gezocht / Wist je dat?</h2>
+        <div class="tabs">
+            <div class="tab active" data-tab="gezocht">Gezocht</div>
+            <div class="tab" data-tab="wistjedat">Wist je dat?</div>
+        </div>
+        <div class="tab-content" id="gezocht">
+            <ul>
+                <li>Jan de Vries, verdachte van inbraak in Haarlem.</li>
+                <li>Mevrouw Jansen, vermist sinds 10 mei.</li>
+                <li>Auto met kenteken XY-123-Z, betrokken bij straatroof.</li>
             </ul>
-        </section>
+        </div>
+        <div class="tab-content" id="wistjedat" style="display:none;">
+            <ul>
+                <li>De surveillance dienst werkt nauw samen met de politie en brandweer.</li>
+                <li>Elke agent heeft een eigen roepnaam die belangrijk is voor communicatie.</li>
+                <li>Veiligheid begint bij oplettendheid van iedereen in de gemeenschap.</li>
+            </ul>
+        </div>
+    </section>
 
-        <section id="meldingen">
-            <h2>Actuele Meldingen</h2>
-            <p>Momenteel zijn er geen actieve meldingen. Houd deze pagina in de gaten voor updates!</p>
-        </section>
+    <section id="team">
+        <h2>Team</h2>
+        <p>Onze surveillance dienst bestaat uit toegewijde spelers die gezamenlijk de veiligheid bewaken. Benieuwd wie er meedoen? Neem contact op via de sollicitatiepagina.</p>
+    </section>
 
-        <section id="team">
-            <h2>Team</h2>
-            <p>Onze surveillance dienst bestaat uit toegewijde spelers die gezamenlijk de veiligheid bewaken. Benieuwd wie er meedoen? Neem contact op via de sollicitatiepagina.</p>
-        </section>
+    <section id="sollicitatie">
+        <h2>Sollicitatie</h2>
+        <p>Wil je lid worden van de Surveillance Dienst Kennemerland? Stuur ons een bericht met je roepnaam en motivatie via het contactformulier. We nemen zo snel mogelijk contact met je op!</p>
+    </section>
 
-        <section id="sollicitatie">
-            <h2>Sollicitatie</h2>
-            <p>Wil je lid worden van de Surveillance Dienst Kennemerland? Stuur ons een bericht met je roepnaam en motivatie via het contactformulier. We nemen zo snel mogelijk contact met je op!</p>
-        </section>
+    <section id="regels">
+        <h2>Regels</h2>
+        <p>Het is belangrijk dat iedereen zich aan de regels houdt om het spel leuk en eerlijk te houden. Respecteer medespelers, volg de opdrachten en werk samen. Geen cheating of onsportief gedrag.</p>
+    </section>
 
-        <section id="regels">
-            <h2>Regels</h2>
-            <p>Het is belangrijk dat iedereen zich aan de regels houdt om het spel leuk en eerlijk te houden. Respecteer medespelers, volg de opdrachten en werk samen. Geen cheating of onsportief gedrag.</p>
-        </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Heb je vragen of hulp nodig? Stuur een e-mail naar <a href="mailto:support@surveillance-kennemerland.nl">support@surveillance-kennemerland.nl</a> of stuur een bericht via Discord.</p>
+    </section>
+</main>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Heb je vragen of hulp nodig? Stuur een e-mail naar <a href="mailto:support@surveillance-kennemerland.nl">support@surveillance-kennemerland.nl</a> of stuur een bericht via Discord.</p>
-        </section>
-    </main>
+<footer>
+    &copy; 2025 Surveillance Dienst Kennemerland
+</footer>
 
-    <footer>
-        &copy; 2025 Surveillance Dienst Kennemerland
-    </footer>
+<script>
+    // Tab functionaliteit
+    const tabs = document.querySelectorAll('.tab');
+    const gezocht = document.getElementById('gezocht');
+    const wistjedat = document.getElementById('wistjedat');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Active tab aanpassen
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            // Content tonen/verbergen
+            if(tab.dataset.tab === 'gezocht') {
+                gezocht.style.display = 'block';
+                wistjedat.style.display = 'none';
+            } else {
+                gezocht.style.display = 'none';
+                wistjedat.style.display = 'block';
+            }
+        });
+    });
+</script>
 </body>
 </html>
