@@ -1,125 +1,69 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Surveillance Dienst Kennemerland - Gezocht</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welkom bij Kennemerland Surveillance</title>
+  <style>
     body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f5f8ff;
-        color: #0b1a66;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        min-height: 100vh;
-        padding: 40px 20px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f8ff;
+      color: #002266;
     }
 
-    #gezocht-wistjedat {
-        max-width: 600px;
-        width: 100%;
-        background: white;
-        border: 2px solid #003399;
-        border-radius: 8px;
-        box-shadow: 0 0 15px rgba(0,51,153,0.2);
-        padding: 20px 30px;
+    header {
+      background-color: #003399;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     h2 {
-        color: #003399;
-        border-bottom: 3px solid #ffdd00;
-        padding-bottom: 8px;
-        margin-bottom: 20px;
-        user-select: none;
+      border-left: 5px solid #ffcc00;
+      padding-left: 15px;
+      color: #003399;
     }
 
-    .tabs {
-        display: flex;
-        border-bottom: 3px solid #003399;
-        margin-bottom: 20px;
-        cursor: pointer;
+    p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    .tab {
-        padding: 10px 25px;
-        border: 2px solid transparent;
-        border-bottom: none;
-        font-weight: 600;
-        color: #003399;
-        background: #e6f0ff;
-        margin-right: 8px;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        transition: background-color 0.3s, border-color 0.3s;
-        user-select: none;
+    footer {
+      background-color: #003399;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 50px;
     }
-
-    .tab.active {
-        background: white;
-        border-color: #003399;
-        border-bottom: 3px solid white;
-        color: #001a66;
-    }
-
-    .tab-content {
-        padding: 0 10px 10px 10px;
-        background: white;
-        min-height: 120px;
-    }
-
-    .tab-content ul {
-        list-style: disc inside;
-        margin: 0;
-        padding-left: 20px;
-    }
-</style>
+  </style>
 </head>
 <body>
 
-<div id="gezocht-wistjedat">
-    <h2>Gezocht / Wist je dat?</h2>
-    <div class="tabs">
-        <div class="tab active" data-tab="gezocht">Gezocht</div>
-        <div class="tab" data-tab="wistjedat">Wist je dat?</div>
-    </div>
-    <div class="tab-content" id="gezocht">
-        <ul>
-            <li>Jan de Vries, verdachte van inbraak in Haarlem.</li>
-            <li>Mevrouw Jansen, vermist sinds 10 mei.</li>
-            <li>Auto met kenteken XY-123-Z, betrokken bij straatroof.</li>
-        </ul>
-    </div>
-    <div class="tab-content" id="wistjedat" style="display:none;">
-        <ul>
-            <li>De surveillance dienst werkt nauw samen met de politie en brandweer.</li>
-            <li>Elke agent heeft een eigen roepnaam die belangrijk is voor communicatie.</li>
-            <li>Veiligheid begint bij oplettendheid van iedereen in de gemeenschap.</li>
-        </ul>
-    </div>
-</div>
+  <header>
+    <h1>Kennemerland Surveillance</h1>
+    <p>Surveillance in samenwerking met Politie, KMar, Brandweer en Ambulance</p>
+  </header>
 
-<script>
-    const tabs = document.querySelectorAll('.tab');
-    const gezocht = document.getElementById('gezocht');
-    const wistjedat = document.getElementById('wistjedat');
+  <div class="container">
+    <h2>Wat doet de politie?</h2>
+    <p>
+      In onze surveillance game speelt de politie een belangrijke rol. De politie houdt toezicht, grijpt in bij strafbare feiten
+      en zorgt ervoor dat iedereen zich veilig voelt. Agenten reageren op meldingen, controleren voertuigen, houden verdachte personen aan
+      en werken samen met andere diensten zoals de brandweer en ambulance. Elke agent heeft een eigen roepnummer en kan communiceren met de meldkamer.
+    </p>
+  </div>
 
-    tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            tabs.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-
-            if (tab.dataset.tab === 'gezocht') {
-                gezocht.style.display = 'block';
-                wistjedat.style.display = 'none';
-            } else {
-                gezocht.style.display = 'none';
-                wistjedat.style.display = 'block';
-            }
-        });
-    });
-</script>
+  <footer>
+    &copy; 2025 Kennemerland Surveillance. Alle rechten voorbehouden.
+  </footer>
 
 </body>
 </html>
