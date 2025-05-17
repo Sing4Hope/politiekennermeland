@@ -35,59 +35,37 @@
     }
 
     .container {
-      max-width: 700px;
+      max-width: 900px;
       margin: 40px auto;
       padding: 20px;
-      background: white;
-      border: 2px solid #003399;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,51,153,0.2);
     }
 
     h2 {
       color: #003399;
-      border-bottom: 3px solid #ffdd00;
+      border-bottom: 3px solid #ffcc00;
       padding-bottom: 8px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       user-select: none;
     }
 
-    .tabs {
-      display: flex;
-      border-bottom: 3px solid #003399;
+    .gezocht-kaart {
+      background-color: white;
+      border: 2px solid #003399;
+      border-left: 8px solid #ffcc00;
+      border-radius: 8px;
+      padding: 20px;
       margin-bottom: 20px;
-      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .tab {
-      padding: 10px 25px;
-      border: 2px solid transparent;
-      border-bottom: none;
-      font-weight: 600;
-      color: #003399;
-      background: #e6f0ff;
-      margin-right: 8px;
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-      transition: background-color 0.3s, border-color 0.3s;
-      user-select: none;
-    }
-
-    .tab.active {
-      background: white;
-      border-color: #003399;
-      border-bottom: 3px solid white;
+    .gezocht-kaart h3 {
+      margin-top: 0;
       color: #001a66;
     }
 
-    .tab-content {
-      padding: 0 10px 10px 10px;
-    }
-
-    .tab-content ul {
-      list-style: disc inside;
-      margin: 0;
-      padding-left: 20px;
+    .gezocht-kaart p {
+      margin: 10px 0 0;
+      font-size: 16px;
     }
 
     footer {
@@ -109,53 +87,27 @@
   </nav>
 
   <div class="container">
-    <h2>Gezocht / Wist je dat?</h2>
+    <h2>Gezochte personen en zaken</h2>
 
-    <div class="tabs">
-      <div class="tab active" data-tab="gezocht">Gezocht</div>
-      <div class="tab" data-tab="wistjedat">Wist je dat?</div>
+    <div class="gezocht-kaart">
+      <h3>🔍 Jan de Vries</h3>
+      <p>Verdachte van een woninginbraak in Haarlem op 12 mei 2025. Mogelijk verplaatst hij zich met een zwarte scooter zonder kenteken.</p>
     </div>
 
-    <div class="tab-content" id="gezocht">
-      <ul>
-        <li>Jan de Vries, verdachte van inbraak in Haarlem.</li>
-        <li>Mevrouw Jansen, vermist sinds 10 mei.</li>
-        <li>Auto met kenteken XY-123-Z, betrokken bij straatroof.</li>
-      </ul>
+    <div class="gezocht-kaart">
+      <h3>❗ Mevrouw Jansen</h3>
+      <p>Vermist sinds 10 mei 2025. Laatst gezien in de omgeving van Zandvoort, draagt een rode jas en zwarte schoenen.</p>
     </div>
 
-    <div class="tab-content" id="wistjedat" style="display: none;">
-      <ul>
-        <li>Surveillance-eenheden rijden 24/7 rond in Kennemerland.</li>
-        <li>Je kunt anoniem tips geven aan de meldkamer.</li>
-        <li>Iedere melding wordt serieus bekeken en beoordeeld.</li>
-      </ul>
+    <div class="gezocht-kaart">
+      <h3>🚗 Auto kenteken XY-123-Z</h3>
+      <p>Voertuig betrokken bij een straatroof in Beverwijk. Rijdend gesignaleerd op de N208 richting Haarlem.</p>
     </div>
   </div>
 
   <footer>
     &copy; 2025 Kennemerland Surveillance. Alle rechten voorbehouden.
   </footer>
-
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const tabContents = {
-      gezocht: document.getElementById('gezocht'),
-      wistjedat: document.getElementById('wistjedat')
-    };
-
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-
-        const selected = tab.dataset.tab;
-        for (const key in tabContents) {
-          tabContents[key].style.display = (key === selected) ? 'block' : 'none';
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
